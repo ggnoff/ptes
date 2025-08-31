@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Property Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f7f7fb;
+      color: #1f2330;
+    }
+    header {
+      max-width: 1000px;
+      margin: 24px auto;
+      padding: 0 16px;
+      text-align: center;
+    }
+    h1 {
+      font-size: clamp(22px, 3vw, 34px);
+      margin-bottom: 6px;
+    }
+    p {
+      margin: 0;
+      color: #6b7280;
+    }
+    .gallery {
+      max-width: 1000px;
+      margin: 0 auto 40px;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform .25s ease;
+    }
+    .gallery img:hover { transform: scale(1.03); }
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .lightbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* or "cover" depending on your preference */
+  border-radius: 0;
+}
+
+    .lightbox:target { display: flex; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> បុរីពិភពថ្មីទួលសង្កែ</h1>
+    <p>ផ្ទះលេខ 39 ផ្លូវលេខ16 សង្កាត់សង្កែ ខណ្ឌប្ញស្សីកែវ</p>
+  </header>
+
+  <div class="gallery">
+    <a href="#img1"><img src="img/front.jpg" alt="Front View"></a>
+    <a href="#img5"><img src="img/outdoor.jpg" alt="Outdoor"></a>
+    <a href="#img2"><img src="img/living.jpg" alt="Living Room"></a>
+    <a href="#img3"><img src="img/kitchen.JPG" alt="Kitchen"></a>
+    <a href="#img4"><img src="img/living2.jpg" alt="Living Area"></a>
+  
+    <a href="#img6"><img src="img/stair.jpg" alt="Staircase"></a>
+    <a href="#img7"><img src="img/room1.jpg" alt="Bedroom 1"></a>
+    <a href="#img8"><img src="img/room2.jpg" alt="Bedroom 2"></a>
+    <a href="#img9"><img src="img/room3.jpg" alt="Bedroom 3"></a>
+    <a href="#img10"><img src="img/room4.jpg" alt="Bedroom 4"></a>
+    <a href="#img11"><img src="img/room5.jpg" alt="Bedroom 5"></a>
+    <a href="#img12"><img src="img/stair2.jpg" alt="Staircase 2"></a>
+    <a href="#img13"><img src="img/balcony.jpg" alt="Balcony"></a>
+  </div>
+  
+  <!-- Lightbox images -->
+  <div id="img1" class="lightbox"><a href="#"><img src="img/front.jpg" alt="Front View"></a></div>
+  <div id="img2" class="lightbox"><a href="#"><img src="img/living.jpg" alt="Living Room"></a></div>
+  <div id="img3" class="lightbox"><a href="#"><img src="img/kitchen.JPG" alt="Kitchen"></a></div>
+  <div id="img4" class="lightbox"><a href="#"><img src="img/living2.jpg" alt="Living Area"></a></div>
+  <div id="img5" class="lightbox"><a href="#"><img src="img/outdoor.jpg" alt="Outdoor"></a></div>
+  <div id="img6" class="lightbox"><a href="#"><img src="img/stair.jpg" alt="Staircase"></a></div>
+  <div id="img7" class="lightbox"><a href="#"><img src="img/room1.jpg" alt="Bedroom 1"></a></div>
+  <div id="img8" class="lightbox"><a href="#"><img src="img/room2.jpg" alt="Bedroom 2"></a></div>
+  <div id="img9" class="lightbox"><a href="#"><img src="img/room3.jpg" alt="Bedroom 3"></a></div>
+  <div id="img10" class="lightbox"><a href="#"><img src="img/room4.jpg" alt="Bedroom 4"></a></div>
+  <div id="img11" class="lightbox"><a href="#"><img src="img/room5.jpg" alt="Bedroom 5"></a></div>
+  <div id="img12" class="lightbox"><a href="#"><img src="img/stair2.jpg" alt="Staircase 2"></a></div>
+  <div id="img13" class="lightbox"><a href="#"><img src="img/balcony.jpg" alt="Balcony"></a></div>
+  
+</body>
+</html>
+
